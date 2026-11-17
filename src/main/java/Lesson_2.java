@@ -2,7 +2,7 @@ public class Lesson_2 {
     public static void main(String[] args) {
         System.out.println("Домашнее задание к Лекции 2.2\n");
 
-        checkSum1020(15, 35);
+        printColor();
     }
 
     public static void printThreeWords() {
@@ -17,6 +17,18 @@ public class Lesson_2 {
             System.out.println("Сумма положительная\n");
         }else{
             System.out.println("Сумма отрицательная\n");
+        }
+    }
+
+    public static void printColor() {
+        int value = 135;
+
+        if (value <= 0){
+            System.out.println("Красный\n");
+        } else if (value > 0 && value <= 100) {
+            System.out.println("Желтый\n");
+        } else if (value > 100) {
+            System.out.println("Зеленый\n");
         }
     }
 
