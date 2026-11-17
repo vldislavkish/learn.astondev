@@ -4,7 +4,6 @@ public class Lesson_2 {
     public static void main(String[] args) {
         System.out.println("Домашнее задание к Лекции 2.2\n");
 
-        System.out.println(Arrays.toString(twoArgArr(5, 123)));
     }
 
     public static void printThreeWords() {
@@ -17,7 +16,7 @@ public class Lesson_2 {
 
         if (a + b >= 0) {
             System.out.println("Сумма положительная\n");
-        }else{
+        } else {
             System.out.println("Сумма отрицательная\n");
         }
     }
@@ -27,9 +26,9 @@ public class Lesson_2 {
 
         if (value <= 0){
             System.out.println("Красный\n");
-        } else if (value > 0 && value <= 100) {
+        } else if (value <= 100) {
             System.out.println("Желтый\n");
-        } else if (value > 100) {
+        } else {
             System.out.println("Зеленый\n");
         }
     }
@@ -40,17 +39,13 @@ public class Lesson_2 {
 
         if (a >= b){
             System.out.println("a >= b\n");
-        }else {
+        } else {
             System.out.println("a < b\n");
         }
     }
 
     public static boolean checkSum1020(int a, int b){
-        if ((a + b >= 10) && (a + b <= 20)){
-            return true;
-        } else {
-            return false;
-        }
+        return ((a + b >= 10) && (a + b <= 20));
     }
 
     public static void numPositiveNegative(int a){
@@ -62,11 +57,7 @@ public class Lesson_2 {
     }
 
     public static boolean numPositiveNegativeV2(int a){
-        if (a < 0){
-            return true;
-        }else {
-            return false;
-        }
+        return a < 0;
     }
 
     public static void stringForNum(String str, int i){
@@ -76,7 +67,7 @@ public class Lesson_2 {
     }
 
     public static boolean leapYear(int year){
-        return year % 4 == 0 && year % 100 != 0 || year % 400 == 0;
+        return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
     }
 
     public static void array01() {
@@ -119,16 +110,10 @@ public class Lesson_2 {
         int[][] arr = new int[5][5];
 
         for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr.length; j++) {
-                if (i == j) {
-                    arr[i][j] = 1;
-                    arr[i][arr.length - 1 - j] = 1;
-                }
-            }
+            arr[i][i] = 1;
+            arr[i][arr.length - 1 - i] = 1;
             System.out.println(Arrays.toString(arr[i]));
         }
-
-
     }
 
     public static int[] twoArgArr (int len, int initialValue) {
