@@ -2,7 +2,7 @@ public class Lesson_2 {
     public static void main(String[] args) {
         System.out.println("Домашнее задание к Лекции 2.2\n");
 
-        stringForNum("qwe", 5);
+        System.out.println(leapYear(2026));
     }
 
     public static void printThreeWords() {
@@ -71,6 +71,10 @@ public class Lesson_2 {
         for (int j = 0; j < i; j++) {
             System.out.println(str);
         }
+    }
+
+    public static boolean leapYear(int year){
+        return year % 4 == 0 && year % 100 != 0 || year % 400 == 0;
     }
 
 }
