@@ -1,8 +1,10 @@
+import java.util.Arrays;
+
 public class Lesson_2 {
     public static void main(String[] args) {
         System.out.println("Домашнее задание к Лекции 2.2\n");
 
-        System.out.println(leapYear(2026));
+        array01();
     }
 
     public static void printThreeWords() {
@@ -75,6 +77,21 @@ public class Lesson_2 {
 
     public static boolean leapYear(int year){
         return year % 4 == 0 && year % 100 != 0 || year % 400 == 0;
+    }
+
+    public static void array01() {
+        int[] arr = {1, 0, 1, 1, 0, 1, 0, 1};
+        int[] arrNew = new int[arr.length];
+
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == 0){
+                arrNew[i] = 1;
+            } else {
+                arrNew[i] = 0;
+            }
+        }
+
+        System.out.println(Arrays.toString(arrNew));
     }
 
 }
