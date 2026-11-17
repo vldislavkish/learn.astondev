@@ -4,7 +4,7 @@ public class Lesson_2 {
     public static void main(String[] args) {
         System.out.println("Домашнее задание к Лекции 2.2\n");
 
-        array01();
+        array100();
     }
 
     public static void printThreeWords() {
@@ -92,6 +92,16 @@ public class Lesson_2 {
         }
 
         System.out.println(Arrays.toString(arrNew));
+    }
+
+    public static void array100() {
+        int[] arr = new int[100];
+
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = i + 1;
+        }
+
+        System.out.println(Arrays.toString(arr));
     }
 
 }
