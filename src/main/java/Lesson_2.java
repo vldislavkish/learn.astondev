@@ -4,7 +4,7 @@ public class Lesson_2 {
     public static void main(String[] args) {
         System.out.println("Домашнее задание к Лекции 2.2\n");
 
-        array6();
+        twoDimArr();
     }
 
     public static void printThreeWords() {
@@ -113,6 +113,22 @@ public class Lesson_2 {
         }
 
         System.out.println(Arrays.toString(arr));
+    }
+
+    public static void twoDimArr() {
+        int[][] arr = new int[5][5];
+
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr.length; j++) {
+                if (i == j) {
+                    arr[i][j] = 1;
+                    arr[i][arr.length - 1 - j] = 1;
+                }
+            }
+            System.out.println(Arrays.toString(arr[i]));
+        }
+
+
     }
 
 }
