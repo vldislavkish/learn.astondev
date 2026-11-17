@@ -1,9 +1,8 @@
 public class Lesson_2 {
     public static void main(String[] args) {
         System.out.println("Домашнее задание к Лекции 2.2\n");
-        printThreeWords();
-        checkSumSign();
-        compareNumbers();
+
+        checkSum1020(15, 35);
     }
 
     public static void printThreeWords() {
@@ -31,5 +30,15 @@ public class Lesson_2 {
             System.out.println("a < b\n");
         }
     }
+
+    public static boolean checkSum1020(int a, int b){
+        if ((a + b >= 10) && (a + b <= 20)){
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+
 
 }
