@@ -2,7 +2,7 @@ public class Lesson_2 {
     public static void main(String[] args) {
         System.out.println("Домашнее задание к Лекции 2.2\n");
 
-        System.out.println(numPositiveNegativeV2(0));
+        stringForNum("qwe", 5);
     }
 
     public static void printThreeWords() {
@@ -64,6 +64,12 @@ public class Lesson_2 {
             return true;
         }else {
             return false;
+        }
+    }
+
+    public static void stringForNum(String str, int i){
+        for (int j = 0; j < i; j++) {
+            System.out.println(str);
         }
     }
 
