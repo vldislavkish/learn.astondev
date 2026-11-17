@@ -2,7 +2,7 @@ public class Lesson_2 {
     public static void main(String[] args) {
         System.out.println("Домашнее задание к Лекции 2.2\n");
 
-        numPositiveNegative(0);
+        System.out.println(numPositiveNegativeV2(0));
     }
 
     public static void printThreeWords() {
@@ -56,6 +56,14 @@ public class Lesson_2 {
             System.out.println("Число положительное\n");
         } else {
             System.out.println("Число отрицательное\n");
+        }
+    }
+
+    public static boolean numPositiveNegativeV2(int a){
+        if (a < 0){
+            return true;
+        }else {
+            return false;
         }
     }
 
