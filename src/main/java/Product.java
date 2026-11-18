@@ -1,10 +1,10 @@
 public class Product {
-    private String name;
-    private String date;
-    private String manufacturer;
-    private String country;
-    private int price;
-    private boolean buyersBookingStatus;
+    private final String name;
+    private final String date;
+    private final String manufacturer;
+    private final String country;
+    private final int price;
+    private final boolean buyersBookingStatus;
 
     public Product (String name, String date, String manufacturer,
                     String country, int price, boolean buyersBookingStatus) {
@@ -36,8 +36,8 @@ public class Product {
         productsArray[4] = new Product("Dyson V15 Detect", "20.01.2025",
                 "Dyson Ltd.", "UK", 2850, true);
 
-        for (int i = 0; i < productsArray.length; i++) {
-            productsArray[i].productInfoConsole();
+        for (Product product : productsArray) {
+            product.productInfoConsole();
         }
 
     }
